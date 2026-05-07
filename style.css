@@ -47,6 +47,40 @@ h1 {
     font-size: 1.05rem;
 }
 
+.puzzle-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #d8d1c5;
+    background: #f8f6f1;
+}
+
+.puzzle-tab {
+    min-height: 38px;
+    border: 2px solid #111;
+    padding: 8px 14px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.puzzle-tab:hover,
+.puzzle-tab:focus {
+    background: #f8dde4;
+    outline: 0;
+}
+
+.puzzle-tab.active {
+    background: #111;
+    color: #fff;
+}
+
 .game {
     display: grid;
     grid-template-columns: minmax(280px, 1fr) 390px;
@@ -108,7 +142,7 @@ h1 {
 }
 
 .crossword-grid {
-    --cell-size: clamp(28px, 4vw, 43px);
+    --cell-size: clamp(25px, 3vw, 38px);
     display: grid;
     grid-template-columns: repeat(var(--cols), var(--cell-size));
     grid-template-rows: repeat(var(--rows), var(--cell-size));
@@ -351,6 +385,15 @@ h1 {
 
     .masthead {
         padding: 20px 16px 16px;
+    }
+
+    .puzzle-menu {
+        justify-content: stretch;
+        padding: 12px;
+    }
+
+    .puzzle-tab {
+        flex: 1 1 100%;
     }
 
     .clues {
