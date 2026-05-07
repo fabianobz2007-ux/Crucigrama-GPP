@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPP - 6to A - GRUPO CHACARRON</title>
+    <title>Ciencia y Tecnologia - 6to A - GRUPO CHACARRON</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="page">
         <header class="masthead">
-            <p class="edition">Gestión de los Procesos Productivos</p>
+            <p class="edition">Ciencia y Tecnologia 7</p>
             <h1>Crucigrama de Conceptos</h1>
-            <p class="subtitle"></p>
+            <p id="puzzle-subtitle" class="subtitle"></p>
         </header>
+
+        <nav class="puzzle-menu" aria-label="Cambiar crucigrama">
+            <button class="puzzle-tab" type="button" data-puzzle="gestion">GPP</button>
+            <button class="puzzle-tab" type="button" data-puzzle="ciencia">Ciencia y tecnologia</button>
+            <button class="puzzle-tab" type="button" data-puzzle="economia">Economia</button>
+        </nav>
 
         <section class="game" aria-label="Crucigrama">
             <div class="crossword-panel">
@@ -37,26 +43,12 @@
             <aside class="clues" aria-label="Pistas">
                 <div class="clue-column">
                     <h2>Horizontales</h2>
-                    <ol>
-                        <li data-clue="h1"><button type="button">Capacidad de lograr objetivos usando bien los recursos.</button></li>
-                        <li data-clue="h2"><button type="button">Gestión del movimiento de materiales, información y productos.</button></li>
-                        <li data-clue="h3"><button type="button">Proceso de formación para mejorar conocimientos y habilidades.</button></li>
-                        <li data-clue="h4"><button type="button">Registro o conjunto de bienes almacenados por una organización.</button></li>
-                        <li data-clue="h5"><button type="button">Reglas o pasos establecidos para realizar una actividad.</button></li>
-                        <li data-clue="h6"><button type="button">Qué logra el resultado esperado.</button></li>
-                    </ol>
+                    <ol id="across-clues"></ol>
                 </div>
 
                 <div class="clue-column">
                     <h2>Verticales</h2>
-                    <ol>
-                        <li data-clue="v1"><button type="button">Organización que realiza actividades económicas.</button></li>
-                        <li data-clue="v2"><button type="button">Medios disponibles para realizar una tarea o producir.</button></li>
-                        <li data-clue="v3"><button type="button">Bienes o servicios ofrecidos al mercado.</button></li>
-                        <li data-clue="v4"><button type="button">Conjunto de actividades productivas de un sector.</button></li>
-                        <li data-clue="v5"><button type="button">Grado en que se alcanzan los objetivos propuestos.</button></li>
-                        <li data-clue="v6"><button type="button">Distribución física de espacios, equipos o áreas de trabajo.</button></li>
-                    </ol>
+                    <ol id="down-clues"></ol>
                 </div>
             </aside>
         </section>
@@ -67,9 +59,9 @@
                 reservados.
             </p>
             <p>
-                Este crucigrama se ofrece solo para jugar en esta página.
+                Este crucigrama se ofrece solo para jugar en esta pagina.
                 No se permite copiar, modificar, redistribuir ni reutilizar
-                su código o contenido sin autorización.
+                su codigo o contenido sin autorizacion.
                 <button id="open-license" class="footer-link" type="button">
                     Ver licencia de uso limitado
                 </button>.
@@ -89,26 +81,26 @@
                     <p><strong>TODOS LOS DERECHOS RESERVADOS</strong></p>
                     <p>Copyright &copy; 2026 Grupo CHACARRON.</p>
 
-                    <h3>Integrantes y créditos del proyecto</h3>
+                    <h3>Integrantes y creditos del proyecto</h3>
                     <ul>
-                        <li>Programación: Fabian Oscar Benitez Zayas.</li>
-                        <li>Búsqueda de conceptos y contenido, y organización del proyecto: Priscila Milagros Huanuco, Benjamin Choque Cayata Morales y Monica Gutierrez Orellana.</li>
+                        <li>Programacion: Fabian Oscar Benitez Zayas.</li>
+                        <li>Busqueda de conceptos y contenido, y organizacion del proyecto: Priscila Milagros Huanuco, Benjamin Choque Cayata Morales y Monica Gutierrez Orellana.</li>
                     </ul>
 
                     <h3>1. Obra protegida</h3>
-                    <p>Este proyecto corresponde a una página web de crucigrama creada por el Grupo CHACARRON. La protección alcanza al código fuente, el diseño visual, la estructura de la página, las pistas, las palabras, los conceptos y cualquier otro contenido incluido en el proyecto.</p>
+                    <p>Este proyecto corresponde a una pagina web de crucigrama creada por el Grupo CHACARRON. La proteccion alcanza al codigo fuente, el diseno visual, la estructura de la pagina, las pistas, las palabras, los conceptos y cualquier otro contenido incluido en el proyecto.</p>
 
                     <h3>2. Uso permitido</h3>
-                    <p>Se permite acceder a la página y utilizarla únicamente para jugar al crucigrama en el sitio donde sea publicado por el Grupo CHACARRON o por sus integrantes autorizados.</p>
+                    <p>Se permite acceder a la pagina y utilizarla unicamente para jugar al crucigrama en el sitio donde sea publicado por el Grupo CHACARRON o por sus integrantes autorizados.</p>
 
                     <h3>3. Usos no permitidos</h3>
-                    <p>Sin autorización previa y por escrito del Grupo CHACARRON, no se permite copiar, modificar, adaptar, traducir, distribuir, vender, sublicenciar, republicar, compartir copias, crear obras derivadas ni usar este proyecto en otros trabajos.</p>
+                    <p>Sin autorizacion previa y por escrito del Grupo CHACARRON, no se permite copiar, modificar, adaptar, traducir, distribuir, vender, sublicenciar, republicar, compartir copias, crear obras derivadas ni usar este proyecto en otros trabajos.</p>
 
-                    <h3>4. Publicación en plataformas</h3>
-                    <p>La publicación de este proyecto en GitHub, GitHub Pages u otra plataforma no otorga permisos adicionales. El hecho de que el proyecto pueda verse en línea no autoriza su copia, reutilización, modificación ni redistribución.</p>
+                    <h3>4. Publicacion en plataformas</h3>
+                    <p>La publicacion de este proyecto en GitHub, GitHub Pages u otra plataforma no otorga permisos adicionales. El hecho de que el proyecto pueda verse en linea no autoriza su copia, reutilizacion, modificacion ni redistribucion.</p>
 
-                    <h3>5. Sin garantías</h3>
-                    <p>El proyecto se ofrece "tal como está", sin garantías de ningún tipo. El Grupo CHACARRON no se hace responsable por usos no autorizados, copias, cambios, redistribuciones o publicaciones realizadas por terceros.</p>
+                    <h3>5. Sin garantias</h3>
+                    <p>El proyecto se ofrece "tal como esta", sin garantias de ningun tipo. El Grupo CHACARRON no se hace responsable por usos no autorizados, copias, cambios, redistribuciones o publicaciones realizadas por terceros.</p>
 
                     <h3>6. Solicitud de permisos</h3>
                     <p>Para solicitar un permiso de uso distinto a los indicados en esta licencia, se debe contactar previamente al Grupo CHACARRON o a sus integrantes.</p>
