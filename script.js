@@ -206,7 +206,7 @@ const puzzles = [
                 id: "v4",
                 number: 4,
                 answer: "LEY",
-                clue: "Regla cientifica que describe algo que se cumple bajo las mismas condiciones.",
+                clue: "Regla cientifica que describe algo que siempre se cumple bajo las mismas condiciones.",
                 row: 5,
                 col: 6,
                 direction: "down"
@@ -350,12 +350,12 @@ const puzzles = [
 ];
 
 const crossword = document.querySelector("#crossword");
+const crosswordStage = document.querySelector(".crossword-stage");
 const currentClueLabel = document.querySelector("#current-clue-label");
 const currentClueText = document.querySelector("#current-clue-text");
 const previousClueButton = document.querySelector("#previous-clue");
 const nextClueButton = document.querySelector("#next-clue");
 const puzzleMenu = document.querySelector(".puzzle-menu");
-const puzzleSubtitle = document.querySelector("#puzzle-subtitle");
 const acrossClues = document.querySelector("#across-clues");
 const downClues = document.querySelector("#down-clues");
 const savedAnswers = {};
@@ -465,6 +465,8 @@ function renderClues() {
 function createGrid() {
     crossword.innerHTML = "";
     cells = [];
+    crosswordStage.style.setProperty("--rows", currentPuzzle.rows);
+    crosswordStage.style.setProperty("--cols", currentPuzzle.cols);
     crossword.style.setProperty("--rows", currentPuzzle.rows);
     crossword.style.setProperty("--cols", currentPuzzle.cols);
 
@@ -709,7 +711,6 @@ function renderPuzzle(puzzleId) {
     model = buildModel();
     activeEntryId = entries[0].id;
 
-    puzzleSubtitle.textContent = currentPuzzle.title;
     renderClues();
     createGrid();
     restoreCurrentPuzzleState();
